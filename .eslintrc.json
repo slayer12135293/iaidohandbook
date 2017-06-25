@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "classes": true,
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "globals": {
+        "console": true,
+        "__DEV__": true,
+        "fetch": true
+    },
+    "env": {
+        "jasmine": true
+    },
+    "rules": {
+        "no-multiple-empty-lines": [ "error", { "max": 1 } ],
+        "react/prop-types": [ 0 ],
+        "indent": [ "error", 4, { "SwitchCase": 1 } ],
+        "object-curly-spacing": [ "error", "always" ],
+        "array-bracket-spacing": [ "error", "always" ],
+        "comma-dangle": [ "error", "always-multiline" ],
+        "no-console": "off",
+        "semi": [ "error", "never" ],
+        "quotes": ["error", "single"],
+        "eol-last": ["error", "always"],
+        "react/display-name": 0
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "feed": {
+    "your_company": "Ditt företag"
+  },
+  "income": "inkomst",
+  "costs": "kostnader",
+  "result": "resultat",
+  "money_and_bank": "kassa och bank",
+  "year": "år",
+  "half_year": "halvår",
+  "quarter": "kvartal",
+  "month": "månad",
+  "months": "månader",
+  "period": "period",
+  "amount": "belopp",
+  "last_x_months": "senaste {{n}} mån"
+}
