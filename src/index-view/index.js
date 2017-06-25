@@ -5,19 +5,21 @@ import {
     View,
     ScrollView,
     Dimensions } from 'react-native'
+import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Touchable } from '../components'
 import { pop, push } from '../app/navigation-reducer'
-import { connect } from 'react-redux'
+import { Screens } from '../app/navigation'
+import Color from '../util/color'
 
 class IndexView extends Component {
     render() {
-        const  pop = this.props
+        const { push, pop } = this.props
 
         return (
             <ScrollView style={styles.scrollContainer}>
                 <View style={styles.container}>
-                    <Touchable>                     
+                    <Touchable onPress={()=>push(Screens.overview)}>                     
                         <View style={styles.boxButton}>
                             <View style={styles.headerBox}>
                                 <Text style={styles.headerBoxText}>{'概'}</Text>
@@ -87,7 +89,7 @@ class IndexView extends Component {
 const styles = StyleSheet.create({
     scrollContainer: {
         flex: 1,
-        backgroundColor:'#ecf0f1',
+        backgroundColor: Color.globalbg,
     },
     container :{
         flex:1,
@@ -96,7 +98,7 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     boxButton: {
-        backgroundColor: '#f39c12',        
+        backgroundColor: '#bdc3c7',        
         width: Dimensions.get('window').width /2 -12,             
         justifyContent: 'center',
         height: 200,
@@ -125,7 +127,6 @@ const styles = StyleSheet.create({
         textShadowRadius: 5,
         textShadowOffset: { width: 2, height: 2 },
     },
-
 
     label: {
         position: 'absolute',

@@ -1,38 +1,59 @@
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import { Text } from '../components'
+import React, { Component } from 'react'
+import { View, StyleSheet, ScrollView } from 'react-native'
+import { Text, Header } from '../components'
 import { connect } from 'react-redux'
+import { pop, push } from '../app/navigation-reducer'
 import { bindActionCreators } from 'redux'
+import Color from '../util/color'
 
-const Overview = () => {
-    return (
-        <View style={styles.container}>
-            <Text> {'overview summary'} </Text>            
-        </View>
-    )
+class Overview extends Component {
+    render() {
+        const { pop } = this.props
+        return (
+            <View style={styles.body}>
+                <Header                    
+                    iconStyle={{ color: Color.white }}
+                    leftIconPress={pop}
+                    title={'Översikt'}
+                    style={styles.header}
+                />
+               
+                <ScrollView>
+                    <View>
+                        <Text> {'overview summary'} </Text>            
+                    </View>
+                </ScrollView>
+                          
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
+    body: {
+        flex:1,
+        backgroundColor: Color.globalbg,
     },
-    content: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+    scrollContainer: {        
+        flex:1,
+        height:200,
+    },
+    container:{        
+        flex:1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        padding: 5,
     },
     header: {
-        backgroundColor: 'purple',
-    },
-    headerText: {
-        textAlign: 'center',
-        color: 'white',
-        fontWeight: 'bold',
+        backgroundColor: '#bdc3c7',
     },
 })
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators(dispatch)
+    return bindActionCreators({
+        pop,
+        push,
+    },dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(Overview)  

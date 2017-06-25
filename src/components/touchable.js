@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Platform, TouchableHighlight, TouchableNativeFeedback, View } from 'react-native'
-
+import Color from '../util/color'
 const Touchable = ({ children, style, androidBackground, androidRippleColor, ...other }) => {
 
     let Touchable  = TouchableHighlight
@@ -25,7 +25,8 @@ const Touchable = ({ children, style, androidBackground, androidRippleColor, ...
         <Touchable
             useForeground={true}
             background={background}
-            underlayColor={'rgba(255,255,255, 0.5)'}
+            //underlayColor={'rgba(255,255,255, 1)'}    
+            underlayColor = {Color.globalbg}        
             activeOpacity={0.5}
             style={style}
             {...other}
