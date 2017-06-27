@@ -4,6 +4,7 @@ import { ReactNavigation } from '../util'
 import { connect } from 'react-redux'
 import  IndexView  from '../index-view'
 import  Overview  from '../overview'
+import OverviewSubtabs from '../overview/navigation'
 
 export const Screens = {
     indexview: 'indexview',
@@ -11,6 +12,7 @@ export const Screens = {
     seitei: 'seitei',
     koryu: 'koryu',
     dictionary: 'dictionary',
+    overviewSubtabs: 'overviewSubtabs',
 }
 
 const mappedScreens = ReactNavigation.mapNavigationStateToProps({
@@ -22,6 +24,7 @@ const Stack = StackNavigator(
     {        
         indexview: { screen: mappedScreens.IndexView },
         overview: { screen: mappedScreens.Overview },
+        overviewSubtabs: { screen: OverviewSubtabs },
     },
     {
         //implement header in each scene instead (share a <Header/> component if needed)

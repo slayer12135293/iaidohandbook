@@ -19,7 +19,7 @@ class IndexView extends Component {
         return (
             <ScrollView style={styles.scrollContainer}>
                 <View style={styles.container}>
-                    <Touchable onPress={()=>push(Screens.overview)}>                     
+                    <Touchable onPress={()=>push(Screens.overviewSubtabs)}>                     
                         <View style={styles.boxButton}>
                             <View style={styles.headerBox}>
                                 <Text style={styles.headerBoxText}>{'概'}</Text>
