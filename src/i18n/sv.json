@@ -1,17 +1,12 @@
 {
-  "feed": {
-    "your_company": "Ditt företag"
+  "homeScreen": {
+    "overview" : "översikt",
+    "wordlist" : "ordlista"
   },
-  "income": "inkomst",
-  "costs": "kostnader",
-  "result": "resultat",
-  "money_and_bank": "kassa och bank",
-  "year": "år",
-  "half_year": "halvår",
-  "quarter": "kvartal",
-  "month": "månad",
-  "months": "månader",
-  "period": "period",
-  "amount": "belopp",
-  "last_x_months": "senaste {{n}} mån"
+  "overview": {
+    "intro":{
+      "text1": "Iaidō (居合道) är en japansk modern budōart. Iaidō kan beskrivas som konsten att dra det japanska svärdet, katana. Iaidōns ursprungliga tekniker kom till för att användas i strid, men har numera ersatts av andra intentioner. Man tränar Iaidō ensam mot tänkta motståndare enligt noga bestämda rörelsemönster. För de som tränar på avancerad nivå kan det snarare beskrivas som en slags meditation i rörelse för att öva upp sitt intuitiva handlande, för att bevara lugnet i stressade situationer, balans, harmoni med mycket fokus på koncentration. Iaidō kan översättas till \"vägen till harmoni med nuet\" eller \"vägen till harmonisk närvaro\". Karaktäristiskt för iaidō är att utövaren drar svärdet och hugger i samma rörelse. Detta kallas nuki-tsuke på japanska. Iaidōn utvecklades under den japanska senmedeltiden för att användas och fungera i strid och övningarna hade striden som huvudsyfte. Idag övar man i princip samma tekniker som då, dock utan en reell strid som mål. Man utövar Iaidō t.ex. av intresse för japanska traditioner, motion, eller själslig utveckling."
+    }  
+  }
+  
 }

@@ -1,17 +1,11 @@
 {
-  "feed": {
-    "your_company": "Your Company"
+  "homeScreen": {
+    "overivew" : "overview",
+    "wordlist" : "dictionary"
   },
-  "income": "income",
-  "costs": "costs",
-  "result": "result",
-  "money_and_bank": "cash and bank",
-  "year": "year",
-  "half_year": "6 months",
-  "quarter": "quarter",
-  "month": "month",
-  "months": "months",
-  "period": "period",
-  "amount": "amount",
-  "last_x_months": "last {{n}} months"
+  "overview": {
+    "intro":{
+      "text1": "Iaido (居合道 Iaidō), abbreviated with iai (居合), is a Japanese martial art that emphasizes being aware and capable of quickly drawing the sword and responding to a sudden attack.\n Iaido is associated with the smooth, controlled movements of drawing the sword from its scabbard (or saya), striking or cutting an opponent, removing blood from the blade, and then replacing the sword in the scabbard. While beginning practitioners of iaido may start learning with a wooden sword (bokken) depending on the teaching style of a particular instructor, most of the practitioners use the blunt edged sword, called iaitō Few, more experienced, iaido practitioners use a sharp edged sword (shinken).\n Practitioners of iaido are often referred to as iaidoka." 
+    }  
+  }
 }

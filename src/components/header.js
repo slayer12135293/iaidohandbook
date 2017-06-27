@@ -3,6 +3,7 @@ import { StyleSheet, TouchableHighlight, View } from 'react-native'
 import { Text } from './index'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import PropTypes from 'prop-types'
+import Color from '../util/color'
 
 const Header = ({ style, title, leftIcon, leftIconPress, rightIcon, rightIconPress, iconStyle, titleStyle }) => {
     return (
@@ -41,12 +42,13 @@ Header.defaultProps = {
     leftIcon: 'arrow-back',
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    
     container: {
         height: 60,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        backgroundColor: Color.globalheader,
     },
     button: {
         height: 60,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { Text } from '../components'
 import { addNavigationHelpers, TabNavigator } from 'react-navigation'
 import { connect } from 'react-redux'
@@ -9,6 +9,8 @@ import Header from '../components/header'
 import { bindActionCreators } from 'redux'
 import { pop } from '../app/navigation-reducer'
 import OverViewTabBar from './overview-tab-bar'
+import Color from '../util/color'
+import i18n from '../i18n/index'
 
 const Tabs = TabNavigator(
     {
@@ -27,13 +29,10 @@ const navigation = ({ dispatch, state, pop }) => {
         <View style={{ flex: 1 }}>
             <Header
                 leftIconPress={pop}
+                title={i18n.t('homeScreen.overview',null,{ capitalize: true })}
                 iconStyle={{ color: 'white' }}
-                style={{ backgroundColor: 'purple' }}
-            >
-                <Text style={{ color: 'white' }}>
-                    {'subTabs'}
-                </Text>
-            </Header>
+                
+            />
             <Tabs
                 navigation={addNavigationHelpers({
                     dispatch,

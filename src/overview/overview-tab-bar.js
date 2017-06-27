@@ -1,47 +1,21 @@
 import React from 'react'
-import { StyleSheet, TouchableHighlight, View } from 'react-native'
-import { Text } from '../components'
+import { BottomTab } from '../components'
 import { bindActionCreators } from 'redux'
 import { jumpTo } from './navigation-reducer'
 import { connect } from 'react-redux'
 
-const tabs = [
-    { key: 'tab1', text: 'Tab1' },
-    { key: 'tab2', text: 'Tab2' },
-]
-
 const OverviewTabBar = ({ jumpTo }) => {
+    const tabs = [
+        { key: 'tab1', text: 'Intro', kenji: '概述', press:() => jumpTo('tab1') },
+        { key: 'tab2', text: 'Kamae', kenji: '構え', press:() => jumpTo('tab2') },
+        { key: 'tab3', text: 'Ashi', kenji: '足入', press:() => jumpTo('tab3') },
+        { key: 'tab4', text: 'Kanana', kenji: '刀' ,press:() => jumpTo('tab4') },
+    ]
+
     return (
-        <View style={styles.container}>
-            {tabs.map(tab => (
-                <TouchableHighlight
-                    key={tab.key}
-                    onPress={() => jumpTo(tab.key)}
-                    style={{ flex: 1, height: 50, justifyContent: 'center' }}
-                >
-                    <Text style={styles.text}>
-                        {tab.text}
-                    </Text>
-                </TouchableHighlight>
-            ))}
-        </View>
+        <BottomTab items = {tabs} />
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        height: 50,
-        backgroundColor: 'purple',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    },
-    text: {
-        color: 'white',
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-})
 
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({

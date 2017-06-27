@@ -11,6 +11,7 @@ import { Touchable } from '../components'
 import { pop, push } from '../app/navigation-reducer'
 import { Screens } from '../app/navigation'
 import Color from '../util/color'
+import i18n from '../i18n/index'
 
 class IndexView extends Component {
     render() {
@@ -25,7 +26,7 @@ class IndexView extends Component {
                                 <Text style={styles.headerBoxText}>{'概'}</Text>
                                 <Text style={styles.headerBoxText}>{'要'}</Text>
                             </View>                        
-                            <Text style={[ styles.label, { left: 40 } ]}>{'Översikt'}</Text>
+                            <Text style={[ styles.label, { left: 40 } ]}>{i18n.t('homeScreen.overview',null,{ capitalize: true })}</Text>
                         </View>                    
                     </Touchable> 
 
@@ -77,7 +78,7 @@ class IndexView extends Component {
                                 <Text style={styles.headerBoxText}>{'語'}</Text>
                                 <Text style={styles.headerBoxText}>{'集'}</Text>
                             </View>                        
-                            <Text style={[ styles.label, { left: 53 } ]}>{'Odlista'}</Text>
+                            <Text style={[ styles.label, { left: 53 } ]}>{i18n.t('homeScreen.wordlist',null,{ capitalize: true })}</Text>
                         </View>                    
                     </Touchable> 
                 </View>
