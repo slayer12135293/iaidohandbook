@@ -13,7 +13,7 @@ const BottomTab = ({ items }) => {
                     onPress={tab.press}
                     style={styles.touchableArea}
                 >
-                    <View style={{  }}>  
+                    <View>  
                         <Text style={styles.label}>
                             {tab.text}
                         </Text>

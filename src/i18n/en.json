@@ -6,6 +6,9 @@
   "overview": {
     "intro":{
       "text1": "Iaido (居合道 Iaidō), abbreviated with iai (居合), is a Japanese martial art that emphasizes being aware and capable of quickly drawing the sword and responding to a sudden attack.\n Iaido is associated with the smooth, controlled movements of drawing the sword from its scabbard (or saya), striking or cutting an opponent, removing blood from the blade, and then replacing the sword in the scabbard. While beginning practitioners of iaido may start learning with a wooden sword (bokken) depending on the teaching style of a particular instructor, most of the practitioners use the blunt edged sword, called iaitō Few, more experienced, iaido practitioners use a sharp edged sword (shinken).\n Practitioners of iaido are often referred to as iaidoka." 
-    }  
+    },
+    "kamae":{
+      "text1": "Kamae (構え) är en japansk term som används i stridskonst, kampsport och traditionell teater (Noh, Kyōgen, Kabuki och Bunraku) som ett element i kata. Det översätts till ungefär \"hållning\". Kanjitecknet för detta ord betyder \"bas\". /n/nKamae ska skiljas från det japanska kampsportuttrycket Tachi (立ち), som också syftar på hållning. Medan Tachi hänvisar till läget av kroppen från midjan och ner, avser Kamae hållningen i hela kroppen och omfattar även ens mentala attityd. Dessa anslutna mentala och fysiska aspekter av beredskap kan individuellt refereras till som respektive kokoro-gamae (心構え) och mi-gamae (身構え) (gamae blir uttalet i sammansatta ord)."
+    }   
   }
 }
