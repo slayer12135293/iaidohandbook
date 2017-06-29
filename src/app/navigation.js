@@ -3,7 +3,6 @@ import { addNavigationHelpers, StackNavigator } from 'react-navigation'
 import { ReactNavigation } from '../util'
 import { connect } from 'react-redux'
 import  IndexView  from '../index-view'
-import  Overview  from '../overview'
 import OverviewSubtabs from '../overview/navigation'
 
 export const Screens = {
@@ -17,13 +16,11 @@ export const Screens = {
 
 const mappedScreens = ReactNavigation.mapNavigationStateToProps({
     IndexView,
-    Overview,
 })
 
 const Stack = StackNavigator(
     {        
         indexview: { screen: mappedScreens.IndexView },
-        overview: { screen: mappedScreens.Overview },
         overviewSubtabs: { screen: OverviewSubtabs },
     },
     {

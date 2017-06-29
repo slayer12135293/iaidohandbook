@@ -1,11 +1,13 @@
 import { StateUtils } from 'react-navigation'
-const JUMP_TO = 'JUMP_TO_SUB_TABS_OVERVIEW'
+const JUMP_TO = 'JUMP_TO_OVERVIEW_TABS_OVERVIEW'
 
 const initialState = {
     index: 0,
     routes: [
         { key: 'tab1', routeName: 'tab1' },
         { key: 'tab2', routeName: 'tab2' },
+        { key: 'tab3', routeName: 'tab3' },
+        { key: 'tab4', routeName: 'tab4' },
     ],
 }
 
