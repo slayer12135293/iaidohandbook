@@ -30,7 +30,7 @@ class IndexView extends Component {
                         </View>                    
                     </Touchable> 
 
-                    <Touchable>                     
+                    <Touchable onPress={()=>push(Screens.seiteiSubtabs)}>                     
                         <View style={styles.boxButton}>
                             <View style={styles.headerBox}>
                                 <Text style={styles.headerBoxText}>{'制'}</Text>
@@ -43,7 +43,7 @@ class IndexView extends Component {
                         </View>                    
                     </Touchable>    
 
-                    <Touchable>                     
+                    <Touchable onPress={()=>push(Screens.musoshindenSubtabs)}>                     
                         <View style={styles.boxButton}>
                             <View style={styles.headerBox}>
                                 <Text style={styles.headerBoxText}>{'夢'}</Text>
@@ -71,7 +71,7 @@ class IndexView extends Component {
                         </View>                    
                     </Touchable>
 
-                    <Touchable>                     
+                    <Touchable onPress={()=>push(Screens.wordList)}>                     
                         <View style={styles.boxButton}>
                             <View style={styles.headerBox}>
                                 <Text style={styles.headerBoxText}>{'用'}</Text>

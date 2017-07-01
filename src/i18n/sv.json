@@ -10,6 +10,11 @@
     "kamae":{
       "text1": "Kamae (構え) är en japansk term som används i stridskonst, kampsport och traditionell teater (Noh, Kyōgen, Kabuki och Bunraku) som ett element i kata. Det översätts till ungefär \"hållning\". Kanjitecknet för detta ord betyder \"bas\". \n\nKamae ska skiljas från det japanska kampsportuttrycket Tachi (立ち), som också syftar på hållning. Medan Tachi hänvisar till läget av kroppen från midjan och ner, avser Kamae hållningen i hela kroppen och omfattar även ens mentala attityd. Dessa anslutna mentala och fysiska aspekter av beredskap kan individuellt refereras till som respektive kokoro-gamae (心構え) och mi-gamae (身構え) (gamae blir uttalet i sammansatta ord)."
     }  
+  },
+  "seitei":{
+    "detail": "detalj",
+    "detaiTab":{
+      "text1": "Zen Nippon Kendo Renmei Iaido is the iaidō style of the All Japan Kendo Federation (AJKF, Zen Nippon Kendo Renmei or ZNKR). This style of standardised iaido is also known as Seitei Iaido (制定 居合道) or Zenkenren Iaido (全剣連 居合道)."
+    }
   }
-  
 }

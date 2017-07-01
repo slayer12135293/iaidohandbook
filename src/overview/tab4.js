@@ -8,13 +8,6 @@ import katana from '../assets/overview/katana.png'
 const tab4 = () => {
     
     return (
-    
-        // <ScrollView style={styles.container} horizontal={true} directionalLockEnabled={true} >            
-        //     <Image
-        //         source={katana}
-        //     />
-            
-        // </ScrollView>
 
         <ScrollView contentContainerStyle={{ height: 720 }}>
             <ScrollView horizontal>

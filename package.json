@@ -13,6 +13,8 @@
     "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
+    "react-native-alphabetlistview": "^0.2.0",
+    "react-native-atoz-listview": "0.0.7",
     "react-native-device-info": "^0.10.2",
     "react-native-icons": "^0.7.1",
     "react-native-vector-icons": "^4.2.0",
