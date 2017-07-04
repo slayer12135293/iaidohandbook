@@ -1,109 +1,119 @@
 import React, { Component } from 'react'
-import { 
-    StyleSheet, 
-    Text, 
-    View,
-    ScrollView,
-    Dimensions } from 'react-native'
+import { ScrollView, View, Text,Image, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Touchable } from '../components'
 import Header from '../components/header'
 import { pop, push } from '../app/navigation-reducer'
-import { Screens } from '../app/navigation'
 import Color from '../util/color'
 import i18n from '../i18n/index'
 import AtoZListView from 'react-native-atoz-listview'
-import AlphabetListView from 'react-native-alphabetlistview'
+import { listSource } from './word-list-source'
+import  AlphabetListView from 'react-native-alphabetlistview'
+import ScrollableTabView from 'react-native-scrollable-tab-view'
+
 
 class WordList extends Component {   
     render(){
-        const { push, pop } = this.props
-        const listSorce = {
-            'A': [
-                {
-                    'name': 'Anh Tuan Nguyen',
-                    'age': 28,
-                },
-                {
-                    'name': 'An Nguyen',
-                    'age': 20,
-                },
-            ],
-            'B': [
-                {
-                    'name': 'asdfasdf',
-                    'age': 28,
-                },
-                {
-                    'name': 'sadfasdfasdf',
-                    'age': 20,
-                },
-            ],
-            'Z': [
-                {
-                    'name': 'Zue Dang',
-                    'age': 22,
-                },
-                {
-                    'name': 'Zoom Jane',
-                    'age': 30,
-                },
-            ],
-        }
+        const { push, pop } = this.props      
        
         return(
-            <View>
+            <View style={styles.container}>
                 <Header
                     leftIconPress={pop}
                     title={i18n.t('homeScreen.wordlist',null,{ capitalize: true })}
                     iconStyle={{ color: 'white' }}                
                 />
-                <Text> {'word list asdfasdfasdf'}</Text>
-                <View style={{ flex: 1 }}>
-                    {/*<AlphabetListView
-                        data={listSorce}
-                        cell={renderRow}
-                        cellHeight={100}
-                        sectionHeaderHeight={22.5}
-                    />*/}
-
+                <ScrollableTabView>
+                            <View tabLabel='Shoden'>
+                                <Text>{'asdfasdfasd'}</Text>
+                            </View>
+                            <View tabLabel='Chūden'>
+                                <Text>{'asdfasdfasdfasdf'}</Text> 
+                            </View>
+                            <View tabLabel='Okuden'>
+                                <Text>{'asdfasdfasdfasdf'}</Text>
+                            </View>
+                
+                        </ScrollableTabView>
+                
+                <View style={{ flex: 1 }}> 
                     <AtoZListView
-                        data={listSorce}     // required array|object 
+                        data={listSource()}     // required array|object 
                         renderRow={renderRow} // required func 
-                        rowHeight={40}      // required number 
-                        sectionHeaderHeight={40}   // required number 
-                        /**
-                        * Optional props: all props will passing to ListView
-                        * you simple look at ListView official document
-                        * headerHeight              number
-                        * footerHeigh               number
-                        * sectionListStyle          number|object
-                        * hideSectionList           bool
-                        * compareFunction           func
-                        * renderSelectionList       func
-                        * sectionListItem           func
-                        * contentOffset             object
-                        * style                     object|number
-                        */
-                    />
+                        rowHeight={25}      // required number                  
+                        sectionHeaderHeight={10}   // required number 
+                        sectionListStyle= {{ padding:1 }}   
+                        sectionHeader={SectionHeader}     
+                        sectionListItem={SectionItem}                  
+                    />                      
+                </View>                 
 
-                </View>                
             </View>
+            
         )
     }
 
 }
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    textStyle: {
+        textAlign:'center',
+        color:'#fff',
+        fontWeight:'700',
+        fontSize:16,
+    },
+    
+})
 
-const renderRow = (item, sectionId, index) => {
+const SectionItem =(item) => {    
+    return (
+        <View style={{             
+            justifyContent: 'center', 
+            alignItems: 'flex-start',
+            marginTop:1,
+            marginBottom:1,
+        }}>
+            <Text style={{ fontSize:10 }}>{item.title} </Text>
+        </View>
+       
+    )  
+}
+const SectionHeader =(item)=> {
+ 
+    // inline styles used for brevity, use a stylesheet when possible
+    let textStyle = {
+        textAlign:'left',
+        color:Color.black,
+        fontSize:16,
+        padding:10,
+    }
+
+    let viewStyle = {
+        backgroundColor: Color.grey,
+    }
+    return (
+        <View style={viewStyle}>
+            <Text style={textStyle}>{item.title} </Text>
+        </View>
+    )
+  
+}
+
+const renderRow = (item) => {
     return (
         <View 
             style={{ 
-                height: 40, 
                 justifyContent: 'center', 
-                alignItems: 'center' }}
+                alignItems: 'flex-start',
+                backgroundColor: Color.borderBottomColor,
+                padding:10,
+                borderBottomWidth:1,
+                borderBottomColor:Color.white }}
         >
-            <Text>{item.name}</Text>
+            <Text>{item.name} {item.kanji}</Text>
+            <Text>{item.text}</Text>
         </View>
     )
 }
@@ -111,7 +121,6 @@ const renderRow = (item, sectionId, index) => {
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({
         pop,
-        push,
     }, dispatch)
 }
 

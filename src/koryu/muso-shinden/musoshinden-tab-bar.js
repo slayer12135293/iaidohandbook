@@ -6,9 +6,8 @@ import { connect } from 'react-redux'
 
 const MusoshindenTabBar = ({ jumpTo }) => {
     const tabs = [
-        { key: 'tab1', text: 'Shoden', kenji: '初伝', press:() => jumpTo('tab1') },
-        { key: 'tab2', text: 'Chūden', kenji: '中伝', press:() => jumpTo('tab2') },
-        { key: 'tab3', text: 'Okuden', kenji: '奥伝', press:() => jumpTo('tab3') }, 
+        { key: 'tab1', text: 'Historia', kenji: '歴史', press:() => jumpTo('tab1') },
+        { key: 'tab2', text: 'Kata', kenji: '形', press:() => jumpTo('tab2') },
     ]
 
     return (
