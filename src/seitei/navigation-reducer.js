@@ -6,6 +6,8 @@ const initialState = {
     routes: [
         { key: 'tab1', routeName: 'tab1' },
         { key: 'tab2', routeName: 'tab2' },
+        { key: 'tab3', routeName: 'tab3' },
+        { key: 'tab4', routeName: 'tab4' },
     ],
 }
 

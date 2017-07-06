@@ -25,6 +25,7 @@ const Tabs = TabNavigator(
         tabBarPosition: 'bottom',
         tabBarComponent: OverViewTabBar,
         animationEnabled: true,
+        swipeEnabled: false,
     }
 )
 

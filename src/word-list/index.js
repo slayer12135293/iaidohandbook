@@ -23,18 +23,6 @@ class WordList extends Component {
                     title={i18n.t('homeScreen.wordlist',null,{ capitalize: true })}
                     iconStyle={{ color: 'white' }}                
                 />
-                <ScrollableTabView>
-                            <View tabLabel='Shoden'>
-                                <Text>{'asdfasdfasd'}</Text>
-                            </View>
-                            <View tabLabel='Chūden'>
-                                <Text>{'asdfasdfasdfasdf'}</Text> 
-                            </View>
-                            <View tabLabel='Okuden'>
-                                <Text>{'asdfasdfasdfasdf'}</Text>
-                            </View>
-                
-                        </ScrollableTabView>
                 
                 <View style={{ flex: 1 }}> 
                     <AtoZListView

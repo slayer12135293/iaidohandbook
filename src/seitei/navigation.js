@@ -5,6 +5,8 @@ import { addNavigationHelpers, TabNavigator } from 'react-navigation'
 import { connect } from 'react-redux'
 import Tab1 from './tab1'
 import Tab2 from './tab2'
+import Tab3 from './tab3'
+import Tab4 from './tab4'
 import Header from '../components/header'
 import { bindActionCreators } from 'redux'
 import { pop } from '../app/navigation-reducer'
@@ -16,11 +18,14 @@ const Tabs = TabNavigator(
     {
         tab1: { screen: Tab1 },
         tab2: { screen: Tab2 },
+        tab3: { screen: Tab3 },
+        tab4: { screen: Tab4 },
     },
     {
         tabBarPosition: 'bottom',
         tabBarComponent: SeiteiTabBar,
         animationEnabled: true,
+        swipeEnabled:false,
     }
 )
 
