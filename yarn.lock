@@ -1077,6 +1077,10 @@ color-convert@^1.0.0:
   dependencies:
     color-name "^1.1.1"
 
+color-js@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/color-js/-/color-js-1.0.4.tgz#97d77af4188ba8e1957ba0d512e6465f321e8f82"
+
 color-name@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.2.tgz#5c8ab72b64bd2215d617ae9559ebb148475cf98d"
@@ -3486,6 +3490,12 @@ react-native-icons@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/react-native-icons/-/react-native-icons-0.7.1.tgz#a05c6c87bff7bfd883903bb9b7156f5ba568f977"
 
+react-native-scrollable-tab-view@^0.6.7:
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.6.7.tgz#3a5fe8a4bd5bc7eb023f306099323bbd9cc284a2"
+  dependencies:
+    react-timer-mixin "^0.13.3"
+
 react-native-tab-view@^0.0.61:
   version "0.0.61"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.61.tgz#9f5446c9ad33158b87f0bccf5004fbff79ca1f92"
@@ -3624,7 +3634,7 @@ react-test-renderer@16.0.0-alpha.6:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react-timer-mixin@^0.13.2:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
 

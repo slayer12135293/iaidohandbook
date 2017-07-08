@@ -1,9 +1,11 @@
 import React from 'react'
-import { StyleSheet, TouchableHighlight, View } from 'react-native'
+import { StyleSheet, TouchableHighlight, View, StatusBar } from 'react-native'
 import { Text } from './index'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import PropTypes from 'prop-types'
 import Color from '../util/color'
+
+const statusBarHeight = StatusBar.currentHeight || 20
 
 const Header = ({ style, title, leftIcon, leftIconPress, rightIcon, rightIconPress, iconStyle, titleStyle }) => {
     return (
@@ -44,7 +46,8 @@ Header.defaultProps = {
 
 const styles = StyleSheet.create({    
     container: {
-        height: 60,
+        height: 60 + statusBarHeight,
+        paddingTop: statusBarHeight,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',

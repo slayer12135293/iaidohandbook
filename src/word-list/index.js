@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { ScrollView, View, Text,Image, StyleSheet } from 'react-native'
+import {  View, Text, StyleSheet, BackHandler } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Header from '../components/header'
-import { pop, push } from '../app/navigation-reducer'
+import { pop } from '../app/navigation-reducer'
 import Color from '../util/color'
 import i18n from '../i18n/index'
 import AtoZListView from 'react-native-atoz-listview'
@@ -11,8 +11,25 @@ import { listSource } from './word-list-source'
 import  AlphabetListView from 'react-native-alphabetlistview'
 import ScrollableTabView from 'react-native-scrollable-tab-view'
 
-
 class WordList extends Component {   
+    constructor(props) {
+        super(props)
+        this._onBackPress = this._onBackPress.bind(this)
+    }
+
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this._onBackPress)
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this._onBackPress)
+    }
+
+    _onBackPress() {
+        const { pop } = this.props
+        pop()
+        return true
+    } 
     render(){
         const { push, pop } = this.props      
        

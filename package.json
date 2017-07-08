@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "accounting": "^0.4.1",
+    "color-js": "^1.0.4",
     "date-fns": "^1.28.5",
     "idx": "^1.5.0",
     "prop-types": "^15.5.10",

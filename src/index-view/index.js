@@ -4,6 +4,7 @@ import {
     Text, 
     View,
     Image,
+    StatusBar,
     ScrollView,
     Dimensions } from 'react-native'
 import { connect } from 'react-redux'
@@ -19,8 +20,13 @@ class IndexView extends Component {
     render() {
         const { push } = this.props
 
-        return (
+        return (            
             <Image source={BackgroundImg} style={{ flex: 1, width: null, height: null }}>
+                <StatusBar
+                    translucent={true}
+                    barStyle={'light-content'}
+                    backgroundColor={Color.darkenByRatio(Color.globalheader, 0.2)}
+                />
                 <ScrollView style={styles.scrollContainer}>                
                     <View style={styles.container}>
                         <Touchable onPress={()=>push(Screens.overviewSubtabs)}>                     
@@ -29,7 +35,7 @@ class IndexView extends Component {
                                     <Text style={styles.headerBoxText}>{'概'}</Text>
                                     <Text style={styles.headerBoxText}>{'要'}</Text>
                                 </View>                        
-                                <Text style={[ styles.label, { left: 40 } ]}>{i18n.t('homeScreen.overview',null,{ capitalize: true })}</Text>
+                                <Text style={[ styles.label ]}>{i18n.t('homeScreen.overview',null,{ capitalize: true })}</Text>
                             </View>                    
                         </Touchable> 
 
@@ -42,7 +48,7 @@ class IndexView extends Component {
                                     <Text style={styles.headerBoxText}>{'合'}</Text>
                                     <Text style={styles.headerBoxText}>{'道'}</Text>
                                 </View>                        
-                                <Text style={[ styles.label, { left: 30 } ]}>{'Seitei Iaido'}</Text>
+                                <Text style={[ styles.label ]}>{'Seitei Iaido'}</Text>
                             </View>                    
                         </Touchable>    
 
@@ -55,7 +61,7 @@ class IndexView extends Component {
                                     <Text style={styles.headerBoxText}>{'伝'}</Text>
                                     <Text style={styles.headerBoxText}>{'流'}</Text>
                                 </View>                        
-                                <Text style={[ styles.label, { left: -5 } ]}>{'Musō Shinden-ryū'}</Text>
+                                <Text style={[ styles.label ]}>{'Musō Shinden-ryū'}</Text>
                             </View>                    
                         </Touchable>  
 
@@ -70,7 +76,7 @@ class IndexView extends Component {
                                     <Text style={styles.headerBoxTextS}>{'信'}</Text>
                                     <Text style={styles.headerBoxTextS}>{'流'}</Text>
                                 </View>                        
-                                <Text style={[ styles.label, { left: -5 } ]}>{'Musō Jikiden Eishin-ryū'}</Text>
+                                <Text style={[ styles.label ]}>{'Musō Jikiden Eishin-ryū'}</Text>
                             </View>                    
                         </Touchable>
 
@@ -81,7 +87,7 @@ class IndexView extends Component {
                                     <Text style={styles.headerBoxText}>{'語'}</Text>
                                     <Text style={styles.headerBoxText}>{'集'}</Text>
                                 </View>                        
-                                <Text style={[ styles.label, { left: 53 } ]}>{i18n.t('homeScreen.wordlist',null,{ capitalize: true })}</Text>
+                                <Text style={[ styles.label ]}>{i18n.t('homeScreen.wordlist',null,{ capitalize: true })}</Text>
                             </View>                    
                         </Touchable>                      
                         
@@ -106,14 +112,23 @@ const styles = StyleSheet.create({
     },
     boxButton: {
         backgroundColor: '#bdc3c7',        
-        width: Dimensions.get('window').width /2 -12,             
+        width: Dimensions.get('window').width /2 -16,             
         justifyContent: 'center',
         height: 200,
-        margin: 3,     
+        margin: 5,   
+        shadowOffset: {
+            width: 2,
+            height: 2,
+        },  
+        shadowOpacity: 0.5,
+        shadowColor: Color.black,
+        elevation: 4,
     },
     headerBox: {
+        position: 'absolute',
         flex:1,
-        alignItems: 'flex-end', 
+        right:7,
+        //alignItems: 'flex-end', 
         justifyContent: 'center',
         margin: 10,
     },    
@@ -136,7 +151,7 @@ const styles = StyleSheet.create({
     },
 
     label: {
-        position: 'absolute',
+        //position: 'absolute',
         fontSize: 25,
         justifyContent: 'center',
         textAlign: 'center',
