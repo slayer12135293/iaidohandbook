@@ -3,6 +3,7 @@ import {
     StyleSheet, 
     Text, 
     View,
+    Image,
     ScrollView,
     Dimensions } from 'react-native'
 import { connect } from 'react-redux'
@@ -12,77 +13,82 @@ import { pop, push } from '../app/navigation-reducer'
 import { Screens } from '../app/navigation'
 import Color from '../util/color'
 import i18n from '../i18n/index'
+import BackgroundImg  from '../assets/indexbg.png'
 
 class IndexView extends Component {
     render() {
-        const { push, pop } = this.props
+        const { push } = this.props
 
         return (
-            <ScrollView style={styles.scrollContainer}>
-                <View style={styles.container}>
-                    <Touchable onPress={()=>push(Screens.overviewSubtabs)}>                     
-                        <View style={styles.boxButton}>
-                            <View style={styles.headerBox}>
-                                <Text style={styles.headerBoxText}>{'概'}</Text>
-                                <Text style={styles.headerBoxText}>{'要'}</Text>
-                            </View>                        
-                            <Text style={[ styles.label, { left: 40 } ]}>{i18n.t('homeScreen.overview',null,{ capitalize: true })}</Text>
-                        </View>                    
-                    </Touchable> 
+            <Image source={BackgroundImg} style={{ flex: 1, width: null, height: null }}>
+                <ScrollView style={styles.scrollContainer}>                
+                    <View style={styles.container}>
+                        <Touchable onPress={()=>push(Screens.overviewSubtabs)}>                     
+                            <View style={styles.boxButton}>
+                                <View style={styles.headerBox}>
+                                    <Text style={styles.headerBoxText}>{'概'}</Text>
+                                    <Text style={styles.headerBoxText}>{'要'}</Text>
+                                </View>                        
+                                <Text style={[ styles.label, { left: 40 } ]}>{i18n.t('homeScreen.overview',null,{ capitalize: true })}</Text>
+                            </View>                    
+                        </Touchable> 
 
-                    <Touchable onPress={()=>push(Screens.seiteiSubtabs)}>                     
-                        <View style={styles.boxButton}>
-                            <View style={styles.headerBox}>
-                                <Text style={styles.headerBoxText}>{'制'}</Text>
-                                <Text style={styles.headerBoxText}>{'定'}</Text>
-                                <Text style={styles.headerBoxText}>{'居'}</Text>
-                                <Text style={styles.headerBoxText}>{'合'}</Text>
-                                <Text style={styles.headerBoxText}>{'道'}</Text>
-                            </View>                        
-                            <Text style={[ styles.label, { left: 30 } ]}>{'Seitei Iaido'}</Text>
-                        </View>                    
-                    </Touchable>    
+                        <Touchable onPress={()=>push(Screens.seiteiSubtabs)}>                     
+                            <View style={styles.boxButton}>
+                                <View style={styles.headerBox}>
+                                    <Text style={styles.headerBoxText}>{'制'}</Text>
+                                    <Text style={styles.headerBoxText}>{'定'}</Text>
+                                    <Text style={styles.headerBoxText}>{'居'}</Text>
+                                    <Text style={styles.headerBoxText}>{'合'}</Text>
+                                    <Text style={styles.headerBoxText}>{'道'}</Text>
+                                </View>                        
+                                <Text style={[ styles.label, { left: 30 } ]}>{'Seitei Iaido'}</Text>
+                            </View>                    
+                        </Touchable>    
 
-                    <Touchable onPress={()=>push(Screens.musoshindenSubtabs)}>                     
-                        <View style={styles.boxButton}>
-                            <View style={styles.headerBox}>
-                                <Text style={styles.headerBoxText}>{'夢'}</Text>
-                                <Text style={styles.headerBoxText}>{'想'}</Text>
-                                <Text style={styles.headerBoxText}>{'神'}</Text>
-                                <Text style={styles.headerBoxText}>{'伝'}</Text>
-                                <Text style={styles.headerBoxText}>{'流'}</Text>
-                            </View>                        
-                            <Text style={[ styles.label, { left: -5 } ]}>{'Musō Shinden-ryū'}</Text>
-                        </View>                    
-                    </Touchable>  
+                        <Touchable onPress={()=>push(Screens.musoshindenSubtabs)}>                     
+                            <View style={styles.boxButton}>
+                                <View style={styles.headerBox}>
+                                    <Text style={styles.headerBoxText}>{'夢'}</Text>
+                                    <Text style={styles.headerBoxText}>{'想'}</Text>
+                                    <Text style={styles.headerBoxText}>{'神'}</Text>
+                                    <Text style={styles.headerBoxText}>{'伝'}</Text>
+                                    <Text style={styles.headerBoxText}>{'流'}</Text>
+                                </View>                        
+                                <Text style={[ styles.label, { left: -5 } ]}>{'Musō Shinden-ryū'}</Text>
+                            </View>                    
+                        </Touchable>  
 
-                    <Touchable>                     
-                        <View style={styles.boxButton}>
-                            <View style={styles.headerBox}>
-                                <Text style={styles.headerBoxTextS}>{'無'}</Text>
-                                <Text style={styles.headerBoxTextS}>{'雙'}</Text>
-                                <Text style={styles.headerBoxTextS}>{'直'}</Text>
-                                <Text style={styles.headerBoxTextS}>{'傳'}</Text>
-                                <Text style={styles.headerBoxTextS}>{'英'}</Text>
-                                <Text style={styles.headerBoxTextS}>{'信'}</Text>
-                                <Text style={styles.headerBoxTextS}>{'流'}</Text>
-                            </View>                        
-                            <Text style={[ styles.label, { left: -5 } ]}>{'Musō Jikiden Eishin-ryū'}</Text>
-                        </View>                    
-                    </Touchable>
+                        <Touchable>                     
+                            <View style={styles.boxButton}>
+                                <View style={styles.headerBox}>
+                                    <Text style={styles.headerBoxTextS}>{'無'}</Text>
+                                    <Text style={styles.headerBoxTextS}>{'雙'}</Text>
+                                    <Text style={styles.headerBoxTextS}>{'直'}</Text>
+                                    <Text style={styles.headerBoxTextS}>{'傳'}</Text>
+                                    <Text style={styles.headerBoxTextS}>{'英'}</Text>
+                                    <Text style={styles.headerBoxTextS}>{'信'}</Text>
+                                    <Text style={styles.headerBoxTextS}>{'流'}</Text>
+                                </View>                        
+                                <Text style={[ styles.label, { left: -5 } ]}>{'Musō Jikiden Eishin-ryū'}</Text>
+                            </View>                    
+                        </Touchable>
 
-                    <Touchable onPress={()=>push(Screens.wordList)}>                     
-                        <View style={styles.boxButton}>
-                            <View style={styles.headerBox}>
-                                <Text style={styles.headerBoxText}>{'用'}</Text>
-                                <Text style={styles.headerBoxText}>{'語'}</Text>
-                                <Text style={styles.headerBoxText}>{'集'}</Text>
-                            </View>                        
-                            <Text style={[ styles.label, { left: 53 } ]}>{i18n.t('homeScreen.wordlist',null,{ capitalize: true })}</Text>
-                        </View>                    
-                    </Touchable> 
-                </View>
-            </ScrollView>
+                        <Touchable onPress={()=>push(Screens.wordList)}>                     
+                            <View style={styles.boxButton}>
+                                <View style={styles.headerBox}>
+                                    <Text style={styles.headerBoxText}>{'用'}</Text>
+                                    <Text style={styles.headerBoxText}>{'語'}</Text>
+                                    <Text style={styles.headerBoxText}>{'集'}</Text>
+                                </View>                        
+                                <Text style={[ styles.label, { left: 53 } ]}>{i18n.t('homeScreen.wordlist',null,{ capitalize: true })}</Text>
+                            </View>                    
+                        </Touchable>                      
+                        
+                    </View>
+                            
+                </ScrollView>
+            </Image>   
         )
     }    
 }
@@ -90,7 +96,7 @@ class IndexView extends Component {
 const styles = StyleSheet.create({
     scrollContainer: {
         flex: 1,
-        backgroundColor: Color.globalbg,
+        //backgroundColor: Color.globalbg,
     },
     container :{
         flex:1,
@@ -143,7 +149,6 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({
-        pop,
         push,
     },dispatch)
 }
