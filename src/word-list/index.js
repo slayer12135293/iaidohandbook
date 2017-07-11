@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {  View, Text, StyleSheet, BackHandler } from 'react-native'
+import {  View, Text, StyleSheet, BackHandler, TextInput } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Header from '../components/header'
@@ -15,6 +15,8 @@ class WordList extends Component {
     constructor(props) {
         super(props)
         this._onBackPress = this._onBackPress.bind(this)
+        this.state = { dataSource: listSource() }
+        this.filterList = this._filterList.bind(this)
     }
 
     componentDidMount() {
@@ -30,6 +32,22 @@ class WordList extends Component {
         pop()
         return true
     } 
+
+    _filterList = (text) => {
+        const initSource = listSource() 
+        let filteredSource = {}       
+        Object.keys(initSource).forEach(x=>{
+            let filteredArray = initSource[x].filter(y=> y.name.toLowerCase().includes(text))
+            if( filteredArray.length >0) {
+                filteredSource[x] = filteredArray
+            }
+        })
+        if(text==''){
+            filteredSource = initSource
+        }
+        this.setState({ dataSource: filteredSource })
+    }
+
     render(){
         const { push, pop } = this.props      
        
@@ -42,8 +60,20 @@ class WordList extends Component {
                 />
                 
                 <View style={{ flex: 1 }}> 
+                    {/*<TextInput
+                        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+                        //onChange={(text) => {this.setState({ text }), console.warn(this.state.text)}  }
+                        onChangeText={(text) => {this.setState({ text }), console.warn(this.state.text)}  }
+                        value={this.state.text}
+                    />*/}
+                    <TextInput
+                        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+                        placeholder= {'Search...'}
+                        onChangeText={(text) => this._filterList(text)}
+                    />
+
                     <AtoZListView
-                        data={listSource()}     // required array|object 
+                        data={this.state.dataSource}     // required array|object 
                         renderRow={renderRow} // required func 
                         rowHeight={25}      // required number                  
                         sectionHeaderHeight={10}   // required number 
@@ -59,6 +89,7 @@ class WordList extends Component {
     }
 
 }
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,

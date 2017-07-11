@@ -13,17 +13,22 @@ export const listSource = () => {
                 'kanji': '武道',
                 'text': 'Way of the Martial (-arts)',
             },
+            {
+                'name': 'Bushi',
+                'kanji': '武士',
+                'text': 'Warrior',
+            },
         ],
         'C': [
             {
-                'name': 'Chūden',
+                'name': 'Chūdenbu',
                 'kanji': '中伝',
                 'text': 'The middle tradition/transmission',
             },
         ],
         'D': [
             {
-                'name': 'Chūden',
+                'name': 'Chūdenb',
                 'kanji': '中伝',
                 'text': 'The middle tradition/transmission',
             },
