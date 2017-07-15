@@ -13,6 +13,7 @@ const Color = {
     globalbg: '#7f8c8d',
     globalheader: '#95a5a6',
     globalbottomtab:'#bdc3c7',
+    blue1:'#2980b9',
 
     lightenByRatio(color, ratio = 0.1) {
         return colorjs(color).lightenByRatio(ratio).toCSS()
