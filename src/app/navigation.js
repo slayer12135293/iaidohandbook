@@ -7,6 +7,7 @@ import  WordListView  from '../word-list'
 import OverviewSubtabs from '../overview/navigation'
 import SeiteiSubtabs from '../seitei/navigation'
 import MusoshindenSubtabs from '../koryu/muso-shinden/navigation'
+import SeiteiKata from '../seitei/seitei-kata'
 
 export const Screens = {
     indexview: 'indexview',
@@ -15,11 +16,13 @@ export const Screens = {
     seiteiSubtabs: 'seiteiSubtabs',
     musoshindenSubtabs: 'musoshindenSubtabs',
     wordList: 'wordList',
+    seiteiKata: 'seiteiKata',
 }
 
 const mappedScreens = ReactNavigation.mapNavigationStateToProps({
     IndexView,
     WordListView,
+    SeiteiKata,
 })
 
 const Stack = StackNavigator(
@@ -29,6 +32,7 @@ const Stack = StackNavigator(
         overviewSubtabs: { screen: OverviewSubtabs },
         seiteiSubtabs: { screen: SeiteiSubtabs },
         musoshindenSubtabs: { screen: MusoshindenSubtabs },
+        seiteiKata: { screen: mappedScreens.SeiteiKata },
     },
     {
         //implement header in each scene instead (share a <Header/> component if needed)

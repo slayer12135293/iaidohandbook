@@ -20,6 +20,8 @@
     "react-native-icons": "^0.7.1",
     "react-native-scrollable-tab-view": "^0.6.7",
     "react-native-vector-icons": "^4.2.0",
+    "react-native-video": "^1.0.0",
+    "react-native-video-player": "^0.7.0",
     "react-navigation": "^1.0.0-beta.9",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
